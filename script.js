@@ -14,7 +14,7 @@ const timer = setInterval(function () {
 
   }
   countdown.textContent = secondsLeft;
-}, 500);
+}, 1000);
 
 // const timer = setInterval(function () {
 //   if (phase === "hang") {
