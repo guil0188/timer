@@ -1,10 +1,18 @@
 const countdown = document.getElementById("countdown");
 const round = document.getElementById("round")
 const phases = document.getElementById("phase")
+const pauseButton = document.getElementById("pause-timer")
+const startButton = document.getElementById("start-timer")
+const endButton = document.getElementById("end-timer")
 
 let secondsLeft = 7;
 let phase = "Hang";
 let roundsCompleted = 0;
+
+function startTimer(){
+
+
+
 
 const timer = setInterval(function () {
   secondsLeft--;
@@ -29,8 +37,14 @@ const timer = setInterval(function () {
       
     }
   }
-
   countdown.textContent = secondsLeft;
   round.textContent = "Round "+ roundsCompleted + " of 6";
   phases.textContent = phase
 }, 1000);
+}
+
+
+pauseButton.addEventListener("click", function (){
+    clearInterval(timer);
+  })
+
